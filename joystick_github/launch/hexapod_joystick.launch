@@ -1,0 +1,4 @@
+<launch>
+    <node name="hexapod_joystick" pkg="joystick_test_pkg" type="hexapod_joystick.py" output="screen"/>
+    <node name="joy_node" pkg="joy" type="joy_node" output="screen"/>
+</launch>

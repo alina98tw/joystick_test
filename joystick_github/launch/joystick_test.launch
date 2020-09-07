@@ -1,0 +1,4 @@
+<launch>
+    <node name="joystick_listener" pkg="joystick_test_pkg" type="joystick_listener.py" output="screen"/>
+    <node name="joy_node" pkg="joy" type="joy_node" output="screen"/>
+</launch>
