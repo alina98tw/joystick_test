@@ -103,4 +103,7 @@ if __name__=='__main__':
   try:
     joystick_listener()
   except rospy.RosInterruptException:
+    GPIO.cleanup()
+    pwm0.stop()
+    pwm1.stop()
     pass
