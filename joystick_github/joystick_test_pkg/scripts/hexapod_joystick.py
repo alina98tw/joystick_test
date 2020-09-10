@@ -85,7 +85,18 @@ def joystick_callback(data):
     time.sleep(1)
     pwm0.set_pwm(9, 0, 375)
     pwm0.set_pwm(11, 0, 375)
-    pwm0.set_pwm(10, 0, 375)    
+    pwm0.set_pwm(10, 0, 375)   
+    
+ if data.buttons[2]==1:
+    rospy.loginfo("Recoge")
+    pwm1.set_pwm(2, 0, 150)
+    time.sleep(2)
+    pwm1.set_pwm(3, 0, 600)
+    time.sleep(2)
+    pwm1.set_pwm(2, 0, 600)
+    time.sleep(2)
+    pwm1.set_pwm(3, 0, 150)
+    time.sleep(2)
 
 def joystick_listener():
   rospy.init_node('joystick_listener', anonymous=True)
